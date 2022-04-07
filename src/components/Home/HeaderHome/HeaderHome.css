@@ -1,0 +1,25 @@
+.header-bg {
+  background-color: #18163b;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 150vh;
+}
+.header-right {
+  background-image: url('../../../asset/images/pic3.png');
+  position: absolute;
+  width:70%;
+  height:0%;
+  
+  background-repeat: no-repeat;
+  /* left: 953.45px;
+  top: 125.02px; */
+}
+.headerPic1 {
+  height: 663.1111971126436px;
+  width: 630.7078162019463px;
+  /* left: 814px;
+  top: 313.2392578125px; */
+  transform: rotate(-15deg);
+}

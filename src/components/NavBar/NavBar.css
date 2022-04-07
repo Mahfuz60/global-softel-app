@@ -1,0 +1,30 @@
+.nav-bg {
+  background-color: #18163b;
+}
+.nav-logo {
+  width: 51px;
+  height: 49px;
+  color: #feb821;
+
+  margin-right: 10px;
+}
+.logo-header {
+  margin-left: 9rem;
+}
+.logo-title {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+}
+.logo-title:hover {
+  color: #f5a104;
+}
+.navbar-nav li a {
+  text-decoration: none;
+  margin-left: 4rem;
+  color: rgb(224, 221, 221);
+}
+.navbar-nav li a:hover {
+  color: #370cf5;
+}
