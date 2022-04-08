@@ -1,15 +1,15 @@
 .header-bg {
-  background-color: #18163b;
+  background-color: #1E1B3A;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   width: 100%;
-  height: 160vh;
+  height: 155vh;
+  position: relative;
 }
 .header-right {
   background-image: url('../../../asset/images/pic3.png');
   position: absolute;
-  width: 56%;
+  width:56%;
   height: 100%;
   background-repeat: no-repeat;
 }
@@ -24,8 +24,8 @@
   margin-left: 30.5rem;
 }
 .headerPic3 img {
-  width: 25%;
-  height: 25%;
+  width: 20%;
+  height: 20%;
 }
 
 .header-left-first {

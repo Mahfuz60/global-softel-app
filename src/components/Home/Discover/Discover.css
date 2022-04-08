@@ -1,0 +1,37 @@
+.discover-bg {
+  background-color: #18163b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height:auto;
+}
+.discover-header {
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 10rem;
+}
+
+.card {
+  background-color: #231e44;
+  width: 95%;
+  margin: 40px auto;
+  padding:2rem; 
+}
+
+.card img {
+  width: 10rem;
+  height: 10rem;
+  margin-left: 4rem;
+}
+.card h4{
+  color:#FFFFFF;
+  text-align: center;
+  margin-top:2rem;
+}
+
+.card p{
+  color:rgb(201, 200, 200);
+  text-align: center;
+  margin-top: 2rem;
+}
