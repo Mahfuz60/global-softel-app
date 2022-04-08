@@ -5,7 +5,7 @@ import logo from '../../asset/images/logo.png';
 
 const NavBar = () => {
   return (
-    <nav className='navbar navbar-expand-lg nav-bg '>
+    <nav className='navbar navbar-expand-lg nav-bg  '>
       <div className='container-fluid'>
         <div className=' logo-header'>
           <img src={logo} alt='' className='nav-logo' />
@@ -24,7 +24,7 @@ const NavBar = () => {
         >
           <span className='navbar-toggler-icon bg-light'></span>
         </button>
-        <div className='collapse navbar-collapse'  id='navbarNav'>
+        <div className='collapse navbar-collapse nav-header' id='navbarNav'>
           <ul className='navbar-nav mx-auto'>
             <li className='nav-item'>
               <NavLink to='/home'>Home</NavLink>
@@ -38,8 +38,10 @@ const NavBar = () => {
             <li className='nav-item'>
               <NavLink to=''>Blog</NavLink>
             </li>
-            <li className='nav-item'>
-              <NavLink to='/'>Contact Us</NavLink>
+            <li className='nav-item '>
+              <NavLink to='/' className='contactUs-nav'>
+                Contact Us
+              </NavLink>
             </li>
           </ul>
         </div>

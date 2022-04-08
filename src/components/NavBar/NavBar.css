@@ -20,11 +20,17 @@
 .logo-title:hover {
   color: #f5a104;
 }
+
 .navbar-nav li a {
   text-decoration: none;
-  margin-left: 4rem;
+  margin-left:3rem;
   color: rgb(224, 221, 221);
 }
 .navbar-nav li a:hover {
-  color: #370cf5;
+  color: #c126e6;
+}
+.navbar-nav li .contactUs-nav {
+  border: 2px solid #7e049c;
+  padding: 7px;
+  margin-left:6.3rem;
 }
