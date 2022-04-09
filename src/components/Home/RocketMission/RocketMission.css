@@ -1,0 +1,29 @@
+.rocketMission-bg {
+  background-color: #1e1b3a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+}
+.navbar {
+  background-color: #272349;
+}
+
+.lunch-nav ul li {
+  list-style: none;
+  color: #cecaca;
+  text-decoration: none;
+}
+
+.rocket-card {
+  background-color: #1d123e;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.rocket-card img{
+  justify-content: center;
+  justify-items: center;
+  
+}

@@ -7,7 +7,7 @@ const Discover = () => {
   return (
     <>
       <div className='discover-bg '>
-        <div className='container pt-5'>
+        <div className='container pt-3'>
           <h1 className='discover-header '>Discover Univerce</h1>
 
           <div className='row d-flex'>
