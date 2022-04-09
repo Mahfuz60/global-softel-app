@@ -14,7 +14,15 @@
   color: #cecaca;
   text-decoration: none;
 }
+.search-button{
+  width: 8rem;
+  background-color:black;
+  color: white;
+  border: none;
+  margin-left: 0;
+}
 
+  
 .rocket-card {
   background-color: #1d123e;
   width: 100%;
@@ -22,8 +30,10 @@
   padding: 1rem;
 }
 
-.rocket-card img{
+.rocket-card img {
   justify-content: center;
   justify-items: center;
-  
+}
+.rocket-card p{
+  line-height: 2px;
 }

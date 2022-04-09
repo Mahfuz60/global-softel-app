@@ -10,7 +10,6 @@ import RocketMissionDetails from './RocketMissionDetails';
 const RocketMission = () => {
   const [value, setValue] = React.useState(new Date());
   const [missions, setMissions] = useState([]);
-  console.log(missions);
 
   const url = 'https://api.spacexdata.com/v3/launches';
 
@@ -19,6 +18,7 @@ const RocketMission = () => {
       .then((res) => res.json())
       .then((data) => setMissions(data));
   }, []);
+
   return (
     <div className='rocketMission-bg pt-5'>
       <div className='container pt-5'>
@@ -37,7 +37,7 @@ const RocketMission = () => {
                     aria-expanded='false'
                     className='text-grayLight pt-2'
                   >
-                    Yes
+                    Yes <span style={{ marginLeft: '2px' }}>^</span>
                   </p>
                   <ul class='dropdown-menu'>
                     <li>
@@ -46,7 +46,7 @@ const RocketMission = () => {
                   </ul>
                 </li>
 
-                <li className='mt-4 mx-5'>Launch Year?</li>
+                <li className='mt-4 mx-5 launch-rocket'>Launch Year?</li>
                 <li className='mt-3 bg-light'>
                   <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <Stack spacing={3}>
@@ -65,8 +65,8 @@ const RocketMission = () => {
             </div>
 
             <form className='d-flex'>
-              <input className='form-control me-2 ' type='search' placeholder='Search for Rocket' aria-label='Search' />
-              <button className='btn btn-outline-light bg-dark' type='submit'>
+              <input className='form-control me-2 w-75 ' type='search' placeholder='Search for Rocket' aria-label='Search' />
+              <button className='search-button' type='submit'>
                 Search
               </button>
             </form>
