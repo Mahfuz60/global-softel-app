@@ -6,11 +6,17 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Stack from '@mui/material/Stack';
 import './RocketMission.css';
 import RocketMissionDetails from './RocketMissionDetails';
+import ReactPaginate from 'react-paginate';
 
 const RocketMission = () => {
-  const [value, setValue] = React.useState(new Date());
+  const [value, setValue] = useState(new Date());
   const [missions, setMissions] = useState([]);
+  //pagination
+  const [offset, setOffset] = useState(0);
+  const [perPage] = useState(8);
+  const [pageCount, setPageCount] = useState(0);
 
+  //space data url
   const url = 'https://api.spacexdata.com/v3/launches';
 
   useEffect(() => {
@@ -18,6 +24,25 @@ const RocketMission = () => {
       .then((res) => res.json())
       .then((data) => setMissions(data));
   }, []);
+
+  //pagination
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('https://api.spacexdata.com/v3/launches');
+      const data = await response.json();
+      setPageCount(Math.ceil(data.length / perPage));
+      setMissions(data.slice(offset, offset + perPage));
+    };
+
+    fetchData();
+  }, [offset]);
+
+  const handlePageClick = (e) => {
+    const selectedPage = e.selected;
+    console.log(selectedPage * perPage);
+
+    setOffset((selectedPage + 1) * perPage);
+  };
 
   return (
     <div className='rocketMission-bg pt-5'>
@@ -76,6 +101,20 @@ const RocketMission = () => {
           {missions.map((mission, id) => (
             <RocketMissionDetails mission={mission} key={id} />
           ))}
+        </div>
+        <div className='row  pagination'>
+          <ReactPaginate
+            previousLabel={'>'}
+            nextLabel={'<'}
+            breakLabel={'...'}
+            breakClassName={'break-me'}
+            pageCount={pageCount}
+            marginPagesDisplayed={1}
+            pageRangeDisplayed={3}
+            onPageChange={handlePageClick}
+            containerClassName={'pagination'}
+            subContainerClassName={'pages pagination'}
+          />
         </div>
       </div>
     </div>

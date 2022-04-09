@@ -14,15 +14,14 @@
   color: #cecaca;
   text-decoration: none;
 }
-.search-button{
+.search-button {
   width: 8rem;
-  background-color:black;
+  background-color: black;
   color: white;
   border: none;
   margin-left: 0;
 }
 
-  
 .rocket-card {
   background-color: #1d123e;
   width: 100%;
@@ -34,6 +33,31 @@
   justify-content: center;
   justify-items: center;
 }
-.rocket-card p{
+.rocket-card p {
   line-height: 2px;
+}
+
+/* pagination */
+
+.pagination {
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  color: rgb(190, 188, 188);
+  font-size:19px;
+}
+.pagination li{
+  margin-right:15px;
+  
+}
+/* .pagination li a{
+  border: 1px solid #848888 ;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+.pagination li a{
+  list-style: none;
+  text-decoration: none;
+  color: #757579;
 }
