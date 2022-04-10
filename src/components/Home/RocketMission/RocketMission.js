@@ -8,9 +8,11 @@ import './RocketMission.css';
 import RocketMissionDetails from './RocketMissionDetails';
 import ReactPaginate from 'react-paginate';
 
+
 const RocketMission = () => {
   const [value, setValue] = useState(new Date());
   const [missions, setMissions] = useState([]);
+ 
   //pagination
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(8);
@@ -28,7 +30,7 @@ const RocketMission = () => {
   //pagination
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://api.spacexdata.com/v3/launches');
+      const response = await fetch(url);
       const data = await response.json();
       setPageCount(Math.ceil(data.length / perPage));
       setMissions(data.slice(offset, offset + perPage));
@@ -36,13 +38,13 @@ const RocketMission = () => {
 
     fetchData();
   }, [offset]);
-
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
 
     setOffset((selectedPage + 1) * perPage);
   };
 
+  
   return (
     <div className='rocketMission-bg pt-5'>
       <div className='container pt-5'>
@@ -90,7 +92,12 @@ const RocketMission = () => {
             </div>
 
             <form className='d-flex'>
-              <input className='form-control me-2 w-75  search-input  ' type='search' placeholder='Search for Rocket' aria-label='Search' />
+              <input
+                className='form-control me-2 w-75  search-input '
+                type='search'
+                placeholder='Search for Rocket'
+                aria-label='Search'
+              />
               <button className='search-button' type='submit'>
                 Search
               </button>

@@ -3,7 +3,6 @@ import './RocketMission.css';
 
 const RocketMissionDetails = ({ mission }) => {
   const { mission_name, launch_year, upcoming, rocket, links } = mission;
-  console.log(upcoming);
   return (
     <div className='col-md-3 col-sm-6 py-5'>
       <div className='rocket-card card'>
