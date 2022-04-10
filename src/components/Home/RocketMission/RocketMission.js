@@ -36,7 +36,7 @@ const RocketMission = () => {
     };
 
     fetchData();
-  }, [offset]);
+  }, [offset + perPage]);
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
 
