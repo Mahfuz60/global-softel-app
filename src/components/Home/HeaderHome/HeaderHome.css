@@ -3,7 +3,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 130vh;
+  height: 170vh;
+  position: relative;
 }
 
 /*header leftSide  */
@@ -11,8 +12,10 @@
   margin-top: 3rem;
 }
 .sudo-img {
-  width: 90%;
-  height: 90%;
+  width: 122.84px;
+  height: 131.14px;
+
+  margin-left: -3rem;
 }
 
 .header-left-second {
@@ -20,7 +23,8 @@
   width: 18rem;
   height: 4rem;
   margin-top: 5rem;
-  text-align: center;
+  margin-left:2rem;
+  text-align: left;
 }
 
 .header-left-second img {
@@ -34,13 +38,13 @@
 
 /* leftside bottom */
 .header-bottom {
-  margin-left: 10rem;
+  margin-left: 6.5rem;
 }
 
 .header-bottom h1 {
   color: white;
   font-weight: bold;
-  margin-top: -3rem;
+  margin-top: 2rem;
   font-size: 55px;
 }
 .header-bottom p {
@@ -62,18 +66,35 @@
 .header-right {
   background-image: url('../../../asset/images/pic3.png');
   width: 120%;
-  height: 125%;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 /* Avatar */
-.headerRight-pic1 img{
+.headerRight-pic1 img {
   width: 90%;
-  height: 100%;
-  
- 
+  height: 90%;
+  position: static;
+  justify-content: center;
+  justify-items: center;
+}
 
+.headerRight-pic2 img {
+  width: 20%;
+  height: 20%;
+  margin-top: -46rem;
+  margin-left: 30rem;
+  justify-content: center;
+  justify-items: center;
+  position: static;
+}
 
+.headerRight-pic3 img {
+  width: 18%;
+  height: 18%;
+  margin-left: 31rem;
+  justify-content: center;
+  justify-items: center;
+  position: static;
 }

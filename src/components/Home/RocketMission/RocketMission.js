@@ -39,7 +39,6 @@ const RocketMission = () => {
 
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
-    console.log(selectedPage * perPage);
 
     setOffset((selectedPage + 1) * perPage);
   };
@@ -72,7 +71,8 @@ const RocketMission = () => {
                 </li>
 
                 <li className='mt-4 mx-5 launch-rocket'>Launch Year?</li>
-                <li className='mt-3 bg-light'>
+                <li className='mt-3 yearPicker'>
+                  {/* YEAR PICKER */}
                   <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <Stack spacing={3}>
                       <DatePicker
@@ -90,7 +90,7 @@ const RocketMission = () => {
             </div>
 
             <form className='d-flex'>
-              <input className='form-control me-2 w-75 ' type='search' placeholder='Search for Rocket' aria-label='Search' />
+              <input className='form-control me-2 w-75  search-input  ' type='search' placeholder='Search for Rocket' aria-label='Search' />
               <button className='search-button' type='submit'>
                 Search
               </button>

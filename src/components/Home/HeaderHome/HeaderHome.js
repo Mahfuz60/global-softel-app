@@ -13,7 +13,7 @@ const HeaderHome = () => {
         <div className='row'>
           <div className='col-12 col-md-6 mt-5'>
             <div className='d-flex'>
-              <div className='header-left-first me-3'>
+              <div className='header-left-first '>
                 <img src={pic2} alt='img' className='sudo-img' />
               </div>
               <div className='header-left-second d-flex'>
@@ -35,7 +35,13 @@ const HeaderHome = () => {
           <div className='col-12 col-md-6'>
             <div className='header-right '>
               <div className='headerRight-pic1'>
-                <img src={Avatar} alt="img" />
+                <img src={Avatar} alt='img' />
+              </div>
+              <div className='headerRight-pic2'>
+                <img src={pic4} alt='' />
+              </div>
+              <div className='headerRight-pic3'>
+                <img src={pic5} alt='' />
               </div>
             </div>
           </div>
