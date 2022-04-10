@@ -26,7 +26,10 @@ const HeaderHome = () => {
               <h1>
                 SPACE FOR <br /> EVERYONE
               </h1>
-              <p>At PIAP Space, we believe that we can make Space and Earth cleaner, engineering, and delivering top-quality robotics solutions.</p>
+              <p>
+                At PIAP Space, we believe that we can <br /> make Space and Earth cleaner, engineering,
+                <br /> and delivering top-quality robotics <br /> solutions.
+              </p>
 
               <button className='get-button'>GET START</button>
             </div>
@@ -34,14 +37,14 @@ const HeaderHome = () => {
 
           <div className='col-12 col-md-6'>
             <div className='header-right '>
-              <div className='headerRight-pic1'>
+              <div className='headerRight-pic1 '>
                 <img src={Avatar} alt='img' />
               </div>
               <div className='headerRight-pic2'>
                 <img src={pic4} alt='' />
               </div>
               <div className='headerRight-pic3'>
-                <img src={pic5} alt='' />
+                <img src={pic5} alt=''/>
               </div>
             </div>
           </div>
