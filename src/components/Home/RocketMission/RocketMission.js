@@ -11,11 +11,12 @@ import ReactPaginate from 'react-paginate';
 const RocketMission = () => {
   const [value, setValue] = useState(new Date());
   const [missions, setMissions] = useState([]);
-
   //pagination
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(8);
   const [pageCount, setPageCount] = useState(0);
+  //search rocket
+  const [disPlayRocket, setDisplayRocket] = useState([]);
 
   //space data url
   const url = 'https://api.spacexdata.com/v3/launches';
@@ -23,8 +24,11 @@ const RocketMission = () => {
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setMissions(data));
-  }, [missions]);
+      .then((data) => {
+        setMissions(data);
+        setDisplayRocket(data);
+      });
+  }, [missions.id]);
 
   //pagination
   useEffect(() => {
@@ -32,15 +36,24 @@ const RocketMission = () => {
       const response = await fetch(url);
       const data = await response.json();
       setPageCount(Math.ceil(data.length / perPage));
-      setMissions(data.slice(offset, offset + perPage));
+      //  setMissions(data.slice(offset, offset + perPage));
+      setDisplayRocket(data.slice(offset, offset + perPage));
     };
 
     fetchData();
-  }, [offset , perPage]);
+  }, [offset, perPage]);
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
 
     setOffset((selectedPage + 1) * perPage);
+  };
+
+  //search Rocket
+  const handleSearch = (event) => {
+    const searchText = event.target.value;
+    const matchRocket = missions.filter((mission) => mission.rocket_name.toLowercase().includes(searchText.toLowercase()));
+
+    setDisplayRocket(matchRocket);
   };
 
   return (
@@ -90,7 +103,13 @@ const RocketMission = () => {
             </div>
 
             <form className='d-flex'>
-              <input className='form-control me-2 w-75  search-input ' type='search' placeholder='Search for Rocket' aria-label='Search' />
+              <input
+                className='form-control me-2 w-75  search-input '
+                type='search'
+                placeholder='Search for Rocket'
+                aria-label='Search'
+                onChange={handleSearch}
+              />
               <button className='search-button' type='submit'>
                 Search
               </button>
@@ -98,7 +117,7 @@ const RocketMission = () => {
           </div>
         </nav>
         <div className='row'>
-          {missions.map((mission, id) => (
+          {disPlayRocket.map((mission, id) => (
             <RocketMissionDetails mission={mission} key={id} />
           ))}
         </div>
@@ -122,3 +141,7 @@ const RocketMission = () => {
 };
 
 export default RocketMission;
+
+
+
+
